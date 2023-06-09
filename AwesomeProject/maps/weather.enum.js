@@ -1,9 +1,7 @@
-
 const WeatherEnum = {
-    CLEAR:{status: 'Clear', color: 'green'},
-    CLOUDS:{status: 'Clouds', color: 'yellow'},
-    RAIN:{status: 'Rain', color: 'green'},
-  };
-  
-  export default WeatherEnum;
-  
+  CLEAR: { status: "Clear", image: "./assets/clear.png" },
+  CLOUDS: { status: "Clouds", image: "./assets/clouds.png" },
+  RAIN: { status: "Rain", image: "./assets/rain.png" },
+};
+
+export default WeatherEnum;

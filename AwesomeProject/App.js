@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, View, Text } from "react-native";
+import { Button, View, Text, Image } from "react-native";
 import ButtonStyles from "./styles/button.style";
 
 const url = "https://api.openweathermap.org/data/2.5/forecast";
@@ -52,12 +52,18 @@ export default class ButtonBasics extends Component {
                 testID="cityBtn"
               />
             </View>
-            {this.state.cityName && (
+          </View>
+          {this.state.cityName && (
+            <>
               <Text testID="weatherDisplayTest">
                 {`${this.state.cityName} will have ${this.state.weather} at ${this.state.dateTime}`}
               </Text>
-            )}
-          </View>
+              <Image
+                source={require(`./assets/cloud.jpeg`)}
+                style={{ width: 40, height: 40 }}
+              />
+            </>
+          )}
         </View>
       </>
     );

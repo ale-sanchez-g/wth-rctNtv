@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "webdriverio": "^8.11.1"
+  }
+}

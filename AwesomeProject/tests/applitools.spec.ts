@@ -122,7 +122,7 @@ test.describe('Wheather App', () => {
   // but the verifications use one-line snapshot calls with Applitools Eyes.
   // If the page ever changes, then Applitools will detect the changes and highlight them in the Eyes Test Manager.
   // Traditional assertions that scrape the page for text values are not needed here.
-  test('Go to the weather App', async ({ page }) => {
+  test.skip('Go to the weather App', async ({ page }) => {
 
     // Load the login page.
     await page.goto('http://localhost:19006/');

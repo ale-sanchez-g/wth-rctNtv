@@ -3,7 +3,7 @@ import { Button, View, Text, Image } from "react-native";
 import ButtonStyles from "./styles/button.style";
 
 const url = "https://api.openweathermap.org/data/2.5/forecast";
-const key = "12d89a391f4fee42e08722e3ededb5b1";
+const key = REPLACE_WITH_YOUR_API_KEY;
 
 export default class ButtonBasics extends Component {
   constructor(props) {
@@ -55,7 +55,11 @@ export default class ButtonBasics extends Component {
           </View>
           {this.state.cityName && (
             <>
-              <Text testID="weatherDisplayTest">
+              <Text 
+              testID="weatherDisplayTest"
+              aria-label="weatherDisplayTest"
+              title="weatherDisplayTest"
+              >
                 {`${this.state.cityName} will have ${this.state.weather} at ${this.state.dateTime}`}
               </Text>
             <Image 

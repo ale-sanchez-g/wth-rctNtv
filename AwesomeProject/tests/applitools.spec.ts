@@ -15,7 +15,7 @@ import {
   Eyes,
   Target,
   IosDeviceName,
-  IosVersion
+  IosVersion,
 } from '@applitools/eyes-playwright';
 
 // Settings to control how tests are run.
@@ -137,8 +137,8 @@ test.describe('Wheather App', () => {
      
     // Verify the full main page loaded correctly.
     // This snapshot uses LAYOUT match level to avoid differences in closing time text.
-    await eyes.check('Weather Display page', Target.window().fully().layout());
-
+    await eyes.check('Weather Display page', 
+    Target.window().fully().layout());
   });
   
   // This method performs cleanup after each test.

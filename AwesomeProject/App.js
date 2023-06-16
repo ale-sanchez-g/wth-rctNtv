@@ -55,33 +55,29 @@ export default class ButtonBasics extends Component {
             </View>
           </View>
           {this.state.cityName && (
-            <View
-              style={{
-                alignItems: "center",
-              }}
-            >
-              <Text
-                testID="weatherDisplayTest"
-                aria-label="weatherDisplayTest"
-                title="weatherDisplayTest"
+            <>
+              <View
+                style={{
+                  alignItems: "center",
+                }}
               >
-                {`${this.state.cityName} is ${this.state.weather} at ${this.state.dateTime}`}
-              </Text>
-              <View style={{
-                width: "100%",
-                height: 100,
-                alignItems: "center",
-              }}>
-                <Image
-                  source={require(`./assets/cloudBckground.jpeg`)}
-                  style={{
-                    marginTop: 10,
-                    width: "100%",
-                    height: 80,
-                  }}
-                />
+                <Text
+                  testID="weatherDisplayTest"
+                  aria-label="weatherDisplayTest"
+                  title="weatherDisplayTest"
+                >
+                  {`${this.state.cityName} is ${this.state.weather} at ${this.state.dateTime}`}
+                </Text>
               </View>
-            </View>
+              <Image
+                source={require(`./assets/cloudBackground.jpeg`)}
+                style={{
+                  marginTop: 10,
+                  width: "100%",
+                  height: 80,
+                }}
+              />
+            </>
           )}
         </View>
       </>

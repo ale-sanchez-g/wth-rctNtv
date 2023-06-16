@@ -66,7 +66,7 @@ test.beforeEach(async ({ context }) => {
   });
 });
 
-test('get started link', async ({ page }) => {
+test('Playwright - get started link', async ({ page }) => {
 
   
   await page.goto('http://localhost:19006/');

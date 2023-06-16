@@ -10,6 +10,8 @@ export default class ButtonBasics extends Component {
     super(props);
     this.state = {
       cityName: "", // State to store the city name
+      weather: "", // State to store the weather
+      dateTime: "", // State to store the date and time
     };
   }
 
@@ -36,15 +38,14 @@ export default class ButtonBasics extends Component {
         <View
           style={{
             flex: 1,
-            justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#4267B2",
+            backgroundColor: "#6495ED",
             marginTop: "15%",
           }}
         >
           <Text style={{ fontSize: 30 }}>Weather APP</Text>
           <Text style={{ fontSize: 20 }}>This is a simple Weather App</Text>
-          <View style={ButtonStyles.container}>
+          <View>
             <View style={ButtonStyles.buttonContainer}>
               <Button
                 onPress={this._onPressButton.bind(this)}
@@ -54,19 +55,33 @@ export default class ButtonBasics extends Component {
             </View>
           </View>
           {this.state.cityName && (
-            <>
-              <Text 
-              testID="weatherDisplayTest"
-              aria-label="weatherDisplayTest"
-              title="weatherDisplayTest"
+            <View
+              style={{
+                alignItems: "center",
+              }}
+            >
+              <Text
+                testID="weatherDisplayTest"
+                aria-label="weatherDisplayTest"
+                title="weatherDisplayTest"
               >
-                {`${this.state.cityName} will have ${this.state.weather} at ${this.state.dateTime}`}
+                {`${this.state.cityName} is ${this.state.weather} at ${this.state.dateTime}`}
               </Text>
-            <Image 
-            source={require(`./assets/cloud.jpeg`)} 
-            style={{width: 40, height: 40}}
-            />
-            </>
+              <View style={{
+                width: "100%",
+                height: 100,
+                alignItems: "center",
+              }}>
+                <Image
+                  source={require(`./assets/cloudBckground.jpeg`)}
+                  style={{
+                    marginTop: 10,
+                    width: "100%",
+                    height: 80,
+                  }}
+                />
+              </View>
+            </View>
           )}
         </View>
       </>
